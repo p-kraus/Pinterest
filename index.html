@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+		<title></title>
+
+		
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<!-- Jquery -->
+ 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+		<!-- Angular -->
+ 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+ 		<link rel="stylesheet" type="text/css" href="main.css">
+ 	
+ 		<!-- Local Scripts -->
+ 		<script type="text/javascript" src="main.js"></script>
+ 		<script type="text/javascript" src='harddata.js'></script>
+ 		<script src="jquery-1.11.0.min.js"></script>
+		<script src="lightbox.min.js"></script>
+		<link href="css/lightbox.css" rel="stylesheet"/>
+
+
+ </head>
+
+
+<body ng-controller='grabController'>
+	<!-- Navbar -->
+
+<br>
+		<img id='home'src="anchor.png">
+		<br>
+		<img id='waves'src="Untitled-1.jpg">
+		<br>
+		<!-- Searchbar -->
+		<div class="please">
+					<form class="search-container">
+					  <input id="search-box" type="text" class="search-box" name="q" ng-model="search" />
+					  <label for="search-box"><span class="glyphicon glyphicon-search search-icon"></span></label>
+					  <input type="submit" id="search-submit"/>
+					</form>
+				</div>
+	
+
+	
+	<!-- Body -->
+
+	<section class='body'>
+			
+
+
+
+		<div class="container back ">
+				<div class="row">
+
+				<div class='block' ng-repeat='da in dat | filter: search'>
+					 	<div class="item1">
+						<div class="pin" >
+						<div class="well">
+
+						<span>{{da.title}}</span><br>
+
+						<a href='{{da.image_url}}' data-lightbox="image-1"/><img class='imgg' src="{{da.image_url}}"/></a> <br><br>
+						{{da.category}} <br> {{da.like}} 
+						<button ng-click="bye($index)" class='butt'><img class='sail' src="sailboat.png"></button>
+						</div>
+						</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</section>
+<br><br>
+</body>
+<!-- Button trigger modal -->
+<button class="btn btn-primary btn-lg addpin" data-toggle="modal" data-target="#myModal">
+  Add Pin
+</button>
+<button class="btn btn-primary btn-lg addpin about" >
+About
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+        	<form>
+				  Title:  <input type='text' ng-model='title'><br>
+				Image URL:<input type='url' ng-model='imgu'><br>
+				Category: <input type='text' ng-model='cat'><br>
+		
+			</form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" ng-click="addPin(title,imgu,cat)">Add Pin</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-fixed-bottom col-xs-8 col-xs-offset-2" role="navigation">
+
+	<div class="center"><span>Anchor</span>
+
+		
+
+
+</div>
+	
+	
+	</nav>
+
+</html>

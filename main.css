@@ -1,0 +1,223 @@
+#home {
+	width:11%;
+	display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 25px;
+
+}
+#waves{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#search {
+	width: 100%;
+}
+#searchbut {
+	width:30px;
+	background: none;
+	border: none;
+}
+/*Search*/
+
+body {
+  margin: 5%;
+  font-family: Helvetica Neue Light;
+  font-size: 15px;
+  	height: 100vh;
+
+}
+
+
+.search-box {
+  -webkit-transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+          transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #ebebeb;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.search-box + label .search-icon {
+  color: black;
+}
+.search-box:hover {
+  color: white;
+  background: #c8c8c8;
+  box-shadow: 0 0 0 5px #3d4752;
+}
+.search-box:hover + label .search-icon {
+  color: #222557;
+}
+.search-box:focus {
+  -webkit-transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
+          transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding-left: 15px;
+  cursor: text;
+  width: 300px;
+  border-radius: auto;
+  background: #ebebeb;
+  color: black;
+}
+.search-box:focus + label .search-icon {
+  color: black;
+}
+.search-box:not(:focus) {
+  text-indent: -5000px;
+}
+
+#search-submit {
+  position: relative;
+  left: -5000px;
+}
+
+.search-icon {
+  position: absolute;
+  color: #222557;
+  display: block;
+    margin-left: auto;
+  margin-right: auto;
+
+  cursor: pointer;
+}
+
+/*Nav*/
+nav {
+	height:100px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 20px;
+}
+.searchbarContainer {
+	margin-top: 35px;
+ 	float: right;
+}
+.btn-primary {
+	background-color: #222557;
+	border-color: white;
+	position: fixed;
+	outline: none;
+}
+
+/*Body*/
+.body{
+
+}
+.block {
+
+}
+.pin {
+	text-align: center;
+	margin:15px;
+	padding: 5px;
+
+}
+
+.back {
+	background-image: url('waveback.png');$
+	border: 3px solid;
+}
+
+/*Masonry*/
+*, *:before, *:after {box-sizing:  border-box !important;}
+
+.pin span{
+	font-size: 25px;
+}
+
+.row {
+ -moz-column-width: 18em;
+ -webkit-column-width: 18em;
+ -moz-column-gap: 0.000001em;
+ -webkit-column-gap:0.000001em; 
+  
+}
+
+.item1 {
+ display: inline-block;
+ padding:  .001rem;
+ width:  100%; 
+
+}
+
+.well {
+ position:relative;
+ display: block;
+ background-color: white;
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.35);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.35);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.35);
+border-radius: 10px;
+border:2px solid #222557 ;
+
+}
+.imgg {
+	max-width: 200px;
+}
+.center {
+	margin-bottom: 1%;
+}
+.navbar {
+	background-color: #222557;
+	border: 2px solid black;
+	border-radius: 25px;
+	font-family: Southern Aire Personal Use Only;
+	color: white;
+
+}
+.addpin{
+	left: 87%;
+	font-size: 40px;
+	top:12%;
+	border: 2px solid black;
+	border-radius: 25px;
+	font-family: Southern Aire Personal Use Only;
+	color: white;
+
+}
+.about {
+	top:20%;
+	left:88%;
+}
+.navbar span{
+	font-size: 127px;
+	position: relative;
+	bottom: 30px;
+	left: 10%;
+	
+}
+.butt {
+	width: 30%;
+	background: none;
+	border: none;
+	margin-left: 70%;
+	outline: none;
+}
+.sail {
+	width: 70%;
+
+}
+p {
+	font-size: 100px;
+}
+.modal-body{
+	text-align: center;
+}
+.author span{
+	font-size: 127px;
+	position: relative;
+	bottom: 30px;
+	left: 11%;
+
+
+}
